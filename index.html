@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Training ke Jepang</title>
+  <title>Kikugumi Training Center</title>
   <style>
     :root {
       --bg: #f8f9fc; 
@@ -53,65 +53,65 @@
 </head>
 <body>
   <header>
-    <div class="logo"><strong>Training Jepang</strong></div>
+    <div class="logo"><strong>Kikugumi Training Center</strong></div>
     <nav>
-      <a href="#about">Tentang</a>
-      <a href="#program">Program</a>
-      <a href="#contact">Kontak</a>
+      <a href="#about">About</a>
+      <a href="#program">Programs</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Program Pelatihan Kerja ke Jepang</h1>
-    <p>Persiapkan masa depanmu dengan mengikuti training berkualitas untuk bekerja di Jepang.</p>
-    <a href="#contact" class="btn">Daftar Sekarang</a>
+    <h1>Hello, welcome to the Official Website of Kikugumi Training Center</h1>
+    <p>Stay tuned for the next update!</p>
+    <a href="#contact" class="btn">Register Now</a>
   </section>
 
   <div class="container">
     <div id="about" class="card">
-      <h2>Tentang Kami (About Us)</h2>
-      <p><strong>ID:</strong> Kami adalah lembaga pelatihan yang membantu calon pekerja mempersiapkan diri sebelum bekerja di Jepang.</p>
-      <p><strong>EN:</strong> We are a training center that helps candidates prepare before working in Japan.</p>
+      <h2>About Us</h2>
+      <p>We are a training center that helps candidates prepare before working in Japan.</p>
     </div>
 
     <div id="program" class="card">
-      <h2>Program (Programs)</h2>
+      <h2>Programs</h2>
       <ul>
-        <li><strong>ID:</strong> Pelatihan Bahasa Jepang — <strong>EN:</strong> Japanese Language Training</li>
-        <li><strong>ID:</strong> Budaya & Etika Kerja — <strong>EN:</strong> Japanese Work Culture & Ethics</li>
-        <li><strong>ID:</strong> Persiapan Teknis — <strong>EN:</strong> Technical Preparation</li>
+        <li>Japanese Language Training</li>
+        <li>Japanese Work Culture & Ethics</li>
+        <li>Technical Preparation</li>
       </ul>
     </div>
 
     <div id="contact" class="card">
-      <h2>Kontak (Contact)</h2>
+      <h2>Contact</h2>
       <form id="form">
-        <label>Nama (Name)<br>
+        <label>Name<br>
           <input type="text" id="name" required style="width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #ccc;">
         </label><br><br>
         <label>Email<br>
           <input type="email" id="email" required style="width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #ccc;">
         </label><br><br>
-        <label>Pesan (Message)<br>
+        <label>Message<br>
           <textarea id="msg" required style="width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #ccc;"></textarea>
         </label><br><br>
-        <button type="submit" class="btn">Kirim</button>
+        <button type="submit" class="btn">Send</button>
       </form>
       <p id="status" style="color:var(--muted); margin-top:10px;"></p>
     </div>
   </div>
 
   <footer>
-    &copy; <span id="year"></span> Training Jepang — All rights reserved
+    &copy; <span id="year"></span> Kikugumi Training Center — All rights reserved
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("form").addEventListener("submit", function(e){
       e.preventDefault();
-      document.getElementById("status").textContent = "Terima kasih! Pesan Anda sudah tercatat (demo).";
+      document.getElementById("status").textContent = "Thank you! Your message has been recorded (demo).";
       this.reset();
     });
   </script>
 </body>
 </html>
+
