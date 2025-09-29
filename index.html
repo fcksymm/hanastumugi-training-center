@@ -4,9 +4,114 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Training ke Jepang</title>
+  <style>
+    :root {
+      --bg: #f8f9fc; 
+      --card: #fff; 
+      --accent: #1d4ed8; 
+      --muted: #666;
+    }
+    body {
+      margin:0; font-family: Arial, sans-serif; background:var(--bg); color:#111;
+    }
+    header {
+      background: var(--card); 
+      display:flex; justify-content:space-between; 
+      align-items:center; padding:16px 24px; 
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    nav a {
+      margin-left:16px; text-decoration:none; color:#111; font-weight:500;
+    }
+    nav a:hover { color:var(--accent); }
+    .container {
+      max-width:1000px; margin:32px auto; padding:0 16px;
+    }
+    .hero {
+      text-align:center; padding:48px 16px;
+    }
+    .hero h1 { font-size:2rem; margin-bottom:12px; }
+    .hero p { color:var(--muted); font-size:1.1rem; }
+    .card {
+      background:var(--card); padding:24px; border-radius:12px; 
+      box-shadow:0 4px 12px rgba(0,0,0,0.05); margin:16px 0;
+    }
+    h2 { margin-top:0; }
+    .btn {
+      display:inline-block; margin-top:12px; 
+      padding:10px 16px; border-radius:8px; 
+      background:var(--accent); color:white; text-decoration:none;
+    }
+    footer {
+      text-align:center; padding:16px; color:var(--muted); font-size:14px;
+    }
+    /* Responsive */
+    @media(max-width:600px){
+      header{flex-direction:column; gap:10px;}
+    }
+  </style>
 </head>
 <body>
-  <h1>Halo, ini Website Training Jepang</h1>
-  <p>Selamat datang di website sederhana untuk informasi training pekerja ke Jepang.</p>
+  <header>
+    <div class="logo"><strong>Training Jepang</strong></div>
+    <nav>
+      <a href="#about">Tentang</a>
+      <a href="#program">Program</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Program Pelatihan Kerja ke Jepang</h1>
+    <p>Persiapkan masa depanmu dengan mengikuti training berkualitas untuk bekerja di Jepang.</p>
+    <a href="#contact" class="btn">Daftar Sekarang</a>
+  </section>
+
+  <div class="container">
+    <div id="about" class="card">
+      <h2>Tentang Kami (About Us)</h2>
+      <p><strong>ID:</strong> Kami adalah lembaga pelatihan yang membantu calon pekerja mempersiapkan diri sebelum bekerja di Jepang.</p>
+      <p><strong>EN:</strong> We are a training center that helps candidates prepare before working in Japan.</p>
+    </div>
+
+    <div id="program" class="card">
+      <h2>Program (Programs)</h2>
+      <ul>
+        <li><strong>ID:</strong> Pelatihan Bahasa Jepang — <strong>EN:</strong> Japanese Language Training</li>
+        <li><strong>ID:</strong> Budaya & Etika Kerja — <strong>EN:</strong> Japanese Work Culture & Ethics</li>
+        <li><strong>ID:</strong> Persiapan Teknis — <strong>EN:</strong> Technical Preparation</li>
+      </ul>
+    </div>
+
+    <div id="contact" class="card">
+      <h2>Kontak (Contact)</h2>
+      <form id="form">
+        <label>Nama (Name)<br>
+          <input type="text" id="name" required style="width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #ccc;">
+        </label><br><br>
+        <label>Email<br>
+          <input type="email" id="email" required style="width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #ccc;">
+        </label><br><br>
+        <label>Pesan (Message)<br>
+          <textarea id="msg" required style="width:100%; padding:8px; margin-top:6px; border-radius:6px; border:1px solid #ccc;"></textarea>
+        </label><br><br>
+        <button type="submit" class="btn">Kirim</button>
+      </form>
+      <p id="status" style="color:var(--muted); margin-top:10px;"></p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> Training Jepang — All rights reserved
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("form").addEventListener("submit", function(e){
+      e.preventDefault();
+      document.getElementById("status").textContent = "Terima kasih! Pesan Anda sudah tercatat (demo).";
+      this.reset();
+    });
+  </script>
 </body>
 </html>
